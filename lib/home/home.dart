@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:to_do_list/checkList/task_list.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -6,6 +7,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -49,11 +52,13 @@ class _HomePageState extends State<HomePage> {
                 // height: 300,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                color: Colors.white,
+                  color: Colors.white,
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(10.0),
                       topRight: Radius.circular(10.0)),
                 ),
+
+                child: TaskList(),
               ),
             ),
           ],
@@ -62,3 +67,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+
+
+
